@@ -1,7 +1,7 @@
 # -------------------------------- #
 # Creating functions in R          #
 # Author: Ubiqum                   #
-#Solutions: Gabor Dunai            #
+# Solutions: Gabor Dunai           #
 # Version 1 - 25.02.2019/07.2019   #
 # -------------------------------- #
 
