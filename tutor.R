@@ -1,0 +1,87 @@
+install.packages('readr')
+library(readr)
+Cars <-read.csv('A:/B/Ubiqum/module2/get_started/tutor/cars.csv')
+1+1
+exp(Inf)
+1-1
+10+10
+10*10
+10*10+10*10
+NA==NA
+x<-NA+10
+is.na(x)
+is.infinite(Cars)
+head(Cars,10)
+đstr(Cars)
+summary(Cars)
+class(Cars)
+sapply(Cars, class)
+installed.packages('stringr')
+library('stringr')
+sys.getlocale('lc_ctype')
+mean(Cars)
+mean(Cars,2)
+cor(Cars)
+boxplot.stats(Cars)
+boxplot.stats(cars,2)
+plot(cars)
+plot.function(cars)
+x1<-c(1,2,5,NA,10)
+is.na(x1)
+mean(x1)
+mean(x1,na.rm=TRUE)
+sum(x1, na.rm=TRUE)
+plot(x1)
+plot.function(x1)
+summary(x1)
+table(x1)
+y1<-data.frame(Cars,2)
+plot(y1)
+summary(y1)
+carname<-Cars$name.of.car
+carspeed<-Cars$speed.of.car
+cardistance<-Cars$distance.of.car
+plot(carspeed)
+library(stringr)
+x1
+x1mod<-c(x1,is.na(TRUE))
+x1mod
+ls()
+arname
+x1[0]
+carname[0]
+cardistance[0]
+carspeed[0]
+is.na(x1)
+data.frame(cars,y1,NA)
+attributes(Cars)
+summary(Cars)
+str(Cars)
+Cars$distance.of.car
+hist(Cars$speed.of.car)
+hist(Cars$distance.of.car)
+plot(Cars$name.of.car, Cars$speed.of.car)
+plot(Cars$distance.of.car, Cars$speed.of.car)
+qqnorm(Cars$speed.of.car)
+qqnorm(Cars$distance.of.car)
+names(Cars)<-c("name","speed","distance")
+summary(Cars)
+is.na(Cars)
+Cars$name<-as.typeofdata(Cars$name)
+na.exclude(Cars$distance)
+na.omit(Cars$distance)
+set.seed(123)
+trainSize<-round(nrow(Cars)*0.7)
+testSize<-nrow(Cars)-trainSize
+trainSize
+testSize
+training_indices<-sample(seq_len(nrow(Cars)),size=trainSize)
+trainSet<-Cars[training_indices,]
+testSet<-Cars[-training_indices,]
+Distance_model<-lm(distance~ speed, trainSet)
+summary(Distance_model)
+PredDistance<-predict(Distance_model, testSet)
+PredDistance
+plot(PredDistance)
+hist(PredDistance)
+line(PredDistance)
